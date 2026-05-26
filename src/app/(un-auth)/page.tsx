@@ -22,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#fdf8f1] text-[#0d1526]">
       <TextSwapStyles />
 
-      <TopBanner />
+      {/* <TopBanner /> */}
       <Navbar />
 
       <main className="px-4 pb-8 lg:px-6">
