@@ -1,6 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const decalotype = localFont({
+  variable: "--font-display",
+  display: "swap",
+  src: [
+    { path: "../../public/fonts/Decalotype-Regular-fix.otf", weight: "400", style: "normal" },
+    { path: "../../public/fonts/Decalotype-Medium-fix.otf", weight: "500", style: "normal" },
+    { path: "../../public/fonts/Decalotype-SemiBold-fix.otf", weight: "600", style: "normal" },
+    { path: "../../public/fonts/Decalotype-Bold-fix.otf", weight: "700", style: "normal" },
+  ],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +44,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn(
+        "h-full",
+        "antialiased",
+        geistSans.variable,
+        geistMono.variable,
+        "font-sans",
+        bricolage.variable,
+        decalotype.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
