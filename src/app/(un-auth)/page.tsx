@@ -33,18 +33,18 @@ export default function Home() {
   );
 }
 
-function TopBanner() {
-  return (
-    <div className="flex items-center justify-center gap-2 bg-[#dcc9f9] px-4 py-1.5 text-center text-xs text-[#0d1526]">
-      <span>4 available slots this week</span>
-      <Link
-        href="/book-cleaning"
-        className="font-bold underline underline-offset-2"
-      >
-        Book before they&rsquo;re gone
-      </Link>
-    </div>
-  );
+// function TopBanner() {
+//   return (
+//     <div className="flex items-center justify-center gap-2 bg-[#dcc9f9] px-4 py-1.5 text-center text-xs text-[#0d1526]">
+//       <span>4 available slots this week</span>
+//       <Link
+//         href="/book-cleaning"
+//         className="font-bold underline underline-offset-2"
+//       >
+//         Book before they&rsquo;re gone
+//       </Link>
+//     </div>
+//   );
 }
 
 function Navbar() {
